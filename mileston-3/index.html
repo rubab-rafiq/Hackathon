@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic & Editable Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🚀 Build Your Professional Resume</h1>
+  <div class="resume-builder">
+    <!-- Form Section -->
+    <form id="resume-form">
+      <fieldset>
+        <!-- Personal Information -->
+        <legend>Personal Information</legend>
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" accept="image/*" required>
+
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email" id="email" required>
+
+        <label for="phonenumber">Phone:</label>
+        <input type="tel" placeholder="Enter your phone number" id="phonenumber" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Bachelor's in Computer Science\n- Master's in Data Analytics" rows="4" required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Experience</legend>
+        <label for="experience">Experience:</label>
+        <textarea id="experience" placeholder="Software Engineer at XYZ Inc.\n- Internship at ABC Corp." required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills:</label>
+        <div id="skills-container">
+          <input type="text" class="skill-input" placeholder="Add a skill" />
+        </div>
+        <br>
+        <button type="button" id="add-skill-btn">Add Skill</button>
+      </fieldset>
+
+      <button type="submit"><b>Generate Resume</b></button>
+    </form>
+  </div>
+
+  <!-- Resume Output Section -->
+  <div id="resume-output"></div>
+
+  <script src="index.js" type="module"></script>
+</body>
+</html>

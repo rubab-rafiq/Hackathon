@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shareable Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>🚀 Build Your Shareable & Download Resume</h1>
+  <div class="resume-builder">
+    <!-- Form Section -->
+    <form id="resume-form">
+      <fieldset>
+        <!-- Personal Information -->
+        <legend>Personal Information</legend>
+        <label for="profile-picture">Profile Picture:</label>
+        <input type="file" id="profile-picture" accept="image/*" required>
+
+        <label for="name">Name:</label>
+        <input type="text" placeholder="Enter your name" id="name" required>
+
+        <label for="username">Username:</label>
+        <input type="text" placeholder="Enter your username" id="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" placeholder="Enter your email" id="email" required>
+
+        <label for="phonenumber">Phone:</label>
+        <input type="tel" placeholder="Enter your phone number" id="phonenumber" required>
+      </fieldset>
+
+      <fieldset>
+        <legend>Education</legend>
+        <label for="education">Education:</label>
+        <textarea id="education" placeholder="Bachelor's in Computer Science\n- Master's in Data Analytics" rows="4" required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Experience</legend>
+        <label for="experience">Experience:</label>
+        <textarea id="experience" placeholder="Software Engineer at XYZ Inc.\n- Internship at ABC Corp." required></textarea>
+      </fieldset>
+
+      <fieldset>
+        <legend>Skills</legend>
+        <label for="skills">Skills:</label>
+        <div id="skills-container">
+          <input type="text" class="skill-input" placeholder="Add a skill" />
+        </div>
+        <br>
+        <button type="button" id="add-skill-btn">Add Skill</button>
+      </fieldset>
+      
+      <button type="submit"><b>Generate Resume</b></button>
+    </form>
+  </div>
+
+  <!-- Dynamic Resume Editable Section -->
+  <div id="resume-output" contenteditable="true">
+    <!-- Resume will be generated here -->
+  </div>
+
+  <br>
+
+  <!-- Section for sharing and download resume, outside the resume-output -->
+  <div id="shareable-link-container" style="display: none;">
+    <h2>Shareable Link</h2>
+
+
+    <p>Here is your shareable link:</p>
+    <a href="#" id="shareable-link" target="_blank">Click Here</a>
+  </div>
+
+  <br>
+
+  <!-- Section for PDF download button, outside the resume-output -->
+  <div id="pdf-button-container" style="display: none;">
+    <button id="download-btn"><b>Download as PDF</b></button>
+  </div>
+
+  
+  <!-- html2pdf script include -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.min.js"></script>
+
+  <!-- Your TypeScript file -->
+  <script src="index.js"></script> <!-- TypeScript will be compiled to index.js -->
+</body>
+</html>
